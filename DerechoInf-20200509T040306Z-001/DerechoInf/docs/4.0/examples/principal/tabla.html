@@ -1,0 +1,444 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Table search: HTML - JavaScript</title>
+    </head>
+<body>
+        <script language="javascript">
+            function doSearch() {
+                var tableReg = document.getElementById('regTable');
+                var searchText = document.getElementById('searchTerm').value.toLowerCase();
+                for (var i = 1; i < tableReg.rows.length; i++) {
+                    var cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+                    var found = false;
+                    for (var j = 0; j < cellsOfRow.length && !found; j++) {
+                        var compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                        if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1)) {
+                            found = true;
+                        }
+                    }
+                    if (found) {
+                        tableReg.rows[i].style.display = '';
+                    } else {
+                        tableReg.rows[i].style.display = 'none';
+                    }
+                }
+            }
+        </script>
+ 
+        <input id="searchTerm" type="text" onkeyup="doSearch()" />
+    <table id="regTable">
+        <tr><td width="165">Palabra</td><td width="829">Concepto</td></tr>
+        <tr><td>Derecho</td><td>Proviene del latín directum, que significa lo que está conforme a  la regla. Es decir, lo que debe ser, lo correcto o lo que esta normado. Es un  conjunto de normas que permiten resolver los conflictos en el seno de una  sociedad.</td></tr>
+        <tr>
+          <td>Legislacion u ordenamiento juridico</td>
+          <td>El conjunto de normas jurídicas que son creadas  en un ordenamiento juridico de un pais, con el fin de arreglar conductas y/o  actos.</td></tr>
+        <tr>
+          <td>Division del Derecho</td>
+          <td>Esta dividido en dos grandes grupos, que sirven para facilitar la  comprension y de este modo saber que sujetos intervienen en los conflictos  puedan ser resueltos; Derecho publico y Derecho Privado.</td></tr>
+        <tr>
+          <td>Derecho publico</td>
+          <td>Estudia el ordenamiento juridico de los vinculos  entre los particulares y el poder publico y sus organismos.</td>
+        </tr>
+        <tr>
+          <td>Ramas del Derecho Público</td>
+          <td>Derecho Laboral, Derecho Penal, Derecho  Tributario y Derecho Constitucional.</td>
+        </tr>
+        <tr>
+          <td>Derecho Privado</td>
+          <td>Se encarga de los asuntos y/o conflictos entre  particulares sin intervencion directa del Estado.</td>
+        </tr>
+        <tr>
+          <td>Ramas del Derecho Privado</td>
+          <td>Derecho Civil, Derecho Mercantil y Derecho  Bancario.</td>
+        </tr>
+        <tr>
+          <td>Derecho Informatico</td>
+          <td>Es amplio y de constante desarrollo, ya que  estan las leyes del derecho y la proteccion de la informatica desarrollandose  mutuamente.</td>
+        </tr>
+        <tr>
+          <td>Derecho Positivo</td>
+          <td>Es aquel al que el estado le ha dado fuerza  obligatoria, conjunto de normas que fueron creadas por una institución que  tiene dicha facultad.</td>
+        </tr>
+        <tr>
+          <td>Derecho vigente</td>
+          <td>:El que tiene fuerza obligatoria en la  actualidad no ha sido derrocado, es un conjunto de normas que son aplicables en  la actualidad.</td>
+        </tr>
+        <tr>
+          <td>TIC</td>
+          <td>Son la tecnologías de la información y la  comunicación, son recursos, herramientas y programas que se utilizan para  procesar, administrar y compartir la información.</td>
+        </tr>
+        <tr>
+          <td>Hardware</td>
+          <td>Se refiere a las partes físicas tangibles de un  sistema informático.</td>
+        </tr>
+        <tr>
+          <td>Software</td>
+          <td>Soporte lógico de un sistema informático que  comprende el conjunto de los componentes lógicos necesarios que hacen posible  la realización de tareas específicas.</td>
+        </tr>
+        <tr>
+          <td>Decreto numero 47-2008</td>
+          <td>regula lo relacionado  con las actividades electrónicas.</td>
+        </tr>
+        <tr>
+          <td>Decreto numero 57-2008</td>
+          <td>Establece la protección de datos personales,  delitos o infracciones que se puedan cometer.</td>
+        </tr>
+        <tr>
+          <td>Decreto numero 17-73(Código penal)</td>
+          <td>Se tipifican los datos informáticos</td>
+        </tr>
+        <tr>
+          <td>Decreto numero 51-92 (Código procesal penal)</td>
+          <td>Se incorpora el uso de video conferencias para  lo cual se utiliza la plataforma internet</td>
+        </tr>
+        <tr>
+          <td>Decreto numero 94-961</td>
+          <td>Ley de telecomunicaciones</td>
+        </tr>
+        <tr>
+          <td>Informatica Juridica</td>
+          <td>Es una rama, subdivisión o aplicación de la  informática que tiene como objetivo utilizar todos los campos o fines del Derecho.</td>
+        </tr>
+        <tr>
+          <td>Tipos de Informatica Jurídica</td>
+          <td>Informática jurídica de gestión,  Informáatica jurídica documental e Informática  jurídica decisional.</td>
+        </tr>
+        <tr>
+          <td>Informática jurídica documental</td>
+          <td>Almacenamiento y recuperación de textos  jurídicos.</td>
+        </tr>
+        <tr>
+          <td>Informática jurídica de control</td>
+          <td>Desarrollo de actividades jurídico-adjetivas </td>
+        </tr>
+        <tr>
+          <td>Sistemas expertos legales o información jurídica  documental</td>
+          <td>Apoyo en la decisión, educación, investigación,  redacción, y previsión del derecho.</td>
+        </tr>
+        <tr>
+          <td>Informática jurídica de gestión</td>
+          <td>El desarrollo de programas de ordenador para facilitar y optimizar  el trabajo del jurista, alcanza también a la administración pública, y en  algunos casos se desarrolla una plataforma específica para la administración de  los expedientes.</td>
+        </tr>
+        <tr>
+          <td>Informática jurídica documental</td>
+          <td>Consiste en el tratamiento automatizado de las  fuentes de conocimiento jurídico, a través de los sistemas de documentación  legislativa, jurisprudencial doctrinal.</td>
+        </tr>
+        <tr>
+          <td>Informática jurídica decisional</td>
+          <td>Consiste en el empleo de ordenadores como ayuda  para la toma de decisiones de carácter jurídico. </td>
+        </tr>
+        <tr>
+          <td>AC</td>
+          <td>Autoridad Competente.</td>
+        </tr>
+        <tr>
+          <td>CADH</td>
+          <td>Convención Americana sobre Derechos Humanos</td>
+        </tr>
+        <tr>
+          <td>CIAGS</td>
+          <td>Carta Internacional Americana de Garanơ as  Sociales.</td>
+        </tr>
+        <tr>
+          <td>CICDCM</td>
+          <td>Convención Interamericana sobre la Concesión de  los Derechos Civiles a la Mujer.</td>
+        </tr>
+        <tr>
+          <td>CIEDR</td>
+          <td>Convención Internacional sobre la Eliminación de  todas las formas de Discriminación Racial.</td>
+        </tr>
+        <tr>
+          <td>CIETFDPD</td>
+          <td>Convención Interamericana para la Eliminación de  Todas las Formas de Discriminación Contra las Personas con Discapacidad.</td>
+        </tr>
+        <tr>
+          <td>CIPDTMF</td>
+          <td>Convención Internacional sobre La Protección de  los Derechos de Todos los Trabajadores Migrantes y de sus Familiares.</td>
+        </tr>
+        <tr>
+          <td>COIT</td>
+          <td>Convenios de la Organización Internacional del Trabajo. </td>
+        </tr>
+        <tr>
+          <td>CPCM</td>
+          <td>Código Procesal Civil y Mercantil. </td>
+        </tr>
+        <tr>
+          <td>CPRG</td>
+          <td>Constitución Política de la República de Guatemala. </td>
+        </tr>
+        <tr>
+          <td>DADDH</td>
+          <td>Declaración Americana sobre los Derechos y  Deberes del Hombre.</td>
+        </tr>
+        <tr>
+          <td>DGE</td>
+          <td>Dirección General de Estadística.</td>
+        </tr>
+        <tr>
+          <td>DOIT</td>
+          <td>Declaración de la OIT sobre los Principios y  Derechos Fundamentales en el Trabajo de 1998.</td>
+        </tr>
+        <tr>
+          <td>DUDH</td>
+          <td>Declaración Universal de Derechos Humanos: De la  Organización de las Naciones Unidas. Adoptada y proclamada por la Asamblea  General en su resolución 217 A (111), del 10 de diciembre de 1948. </td>
+        </tr>
+        <tr>
+          <td>IGT</td>
+          <td>Inspección General de Trabajo. </td>
+        </tr>
+        <tr>
+          <td>IVS</td>
+          <td>Invalidez Vejez y Sobrevivencia</td>
+        </tr>
+        <tr>
+          <td>JMBG</td>
+          <td>Junta Monetaria del Banco de Guatemala. </td>
+        </tr>
+        <tr>
+          <td>JTPS</td>
+          <td>Juzgados de Trabajo y Previsión Social. </td>
+        </tr>
+        <tr>
+          <td>LOJ</td>
+          <td>Ley del Organismo Judicial</td>
+        </tr>
+        <tr>
+          <td>LSM</td>
+          <td>Ley de Servicio Municipal (Decreto 1-87 del  Congreso de la República). </td>
+        </tr>
+        <tr>
+          <td>LSC</td>
+          <td>Ley de Servicio Civil del Organismo Ejecutivo  (Decreto 1748 del Congreso de la República). </td>
+        </tr>
+        <tr>
+          <td>LSCOJ</td>
+          <td>Ley de Servicio Civil del Organismo Judicial  (Decreto 48- 99 del Congreso de la República) Código del Trabajo de Guatemala.</td>
+        </tr>
+        <tr>
+          <td>LSCOL</td>
+          <td>Ley de Servicio Civil del Organismo Legislativo  (Decreto 44-86 del Congreso de la República).</td>
+        </tr>
+        <tr>
+          <td>LSRHTE</td>
+          <td>Ley de Sindicalización y Regulación de la Huelga  de los Trabajadores del Estado y su Reforma (Decreto 71-86 del Congreso de la  República).</td>
+        </tr>
+        <tr>
+          <td>MTPS</td>
+          <td>Ministerio de Trabajo y Previsión Social.</td>
+        </tr>
+        <tr>
+          <td>PCADH</td>
+          <td>Protocolo Adicional a la Convención Americana  sobre Derechos Humanos Relativo a los Derechos Económicos, Sociales y  Culturales (Protocolo de San Salvador). Decreto del Congreso número 127-96, del  27 de noviembre de 1996. Ratificación: 30 de mayo del 2000. Fecha de depósito:  5 de octubre del 2000 – OEA. Fecha de publicación: 11 de octubre de 2001. </td>
+        </tr>
+        <tr>
+          <td>PIDCP</td>
+          <td>Pacto Internacional de Derechos Civiles y  Políticos: Decreto del Congreso número 9-92, del 19 de febrero de 1992. Fecha  de adhesión: 1 de mayo de 1992. Fecha de depósito: 16 de marzo de 1992 - ONU.  Fecha de publicación: 11 de septiembre de 1992.</td>
+        </tr>
+        <tr>
+          <td>PIDESC</td>
+          <td>Pacto Internacional de Derechos Económicos,  Sociales y Culturales. Organización de las Naciones Unidas. Adoptada y  proclamada por la Asamblea General en su resolución 2200 A (XXI), de 16 de  diciembre de 1966. Decreto del Congreso número 69-97, del 30 de septiembre de  1987. Fecha de adhesión 6 de abril de 1988. Fecha de depósito: 19 de mayo de  1988 – ONU y fecha de publicación 8 de agosto de 1988.</td>
+        </tr>
+        <tr>
+          <td>SAJ</td>
+          <td>Sala de Apelaciones Jurisdiccional. SCATPS: Sala  de la Corte de Apelaciones de Trabajo y Previsión Social. TA: Tribunales de  Arbitraje. TC: Tribunales de Conciliación. TCA: Tribunales de Conciliación y  Arbitraje. TTPS: Tribunales de Trabajo y Previsión Social.</td>
+        </tr>
+        <tr>
+          <td>Artículo 10</td>
+          <td>El presente Código regula los derechos y  obligaciones de patronos y trabajadores, con ocasión del trabajo, y crea  instituciones para resolver sus conflictos</td>
+        </tr>
+        <tr>
+          <td>Artículo 20</td>
+          <td>Patrono es toda persona individual o jurídica  que utiliza los servicios de uno o más trabajadores, en virtud de un contrato o  relación de trabajo.</td>
+        </tr>
+        <tr>
+          <td>Artículo 30</td>
+          <td>Trabajador es toda persona individual que presta  a un patrono sus servicios materiales, intelectuales o de ambos géneros, en  virtud de un contrato o relación de trabajo.</td>
+        </tr>
+        <tr>
+          <td>Artículo 40</td>
+          <td>Representantes del patrono son las personas  individuales que ejercen a nombre de éste funciones de dirección o de  administración, tales como gerentes, directores, administradores, reclutadores  y todas las que estén legítimamente autorizadas por aquél.</td>
+        </tr>
+        <tr>
+          <td>Artículo 50</td>
+          <td>Intermediario es toda persona que contrata en  nombre propio los servicios de uno o más trabajadores para que ejecuten algún  trabajo en beneficio de un patrono.</td>
+        </tr>
+        <tr>
+          <td>Artículo 60</td>
+          <td>Sólo mediante resolución de autoridad competente  basada en ley, dictada por motivo de orden público o de interés nacional, podrá  limitarse a una persona su derecho al trabajo. Como consecuencia, ninguno podrá  impedir a otro que se dedique a la profesión o actividad lícita que le plazca.</td>
+        </tr>
+        <tr>
+          <td>Derecho Laboral</td>
+          <td>Su finalidad primordial  es compensar la desigualdad económica, entre el trabajador y el patrono,  otorgándole al trabajador, una protección jurídica preferente.</td>
+        </tr>
+        <tr>
+          <td>Principios que inspiran al  derecho laboral</td>
+          <td>Principio de  TUTELARIDAD O PROTECTORIO, Principio de DERECHOS  MINIMOS, Principio de  IRRENUNCIABILIDAD, Principio de SUPERACIÒN DE LOS  DERECHOS MINIMOS, Principio de IMPERATIVIDAD, Principio CONCILIATORIO, Principio de INDUBIO PRO  OPERARIO.</td>
+        </tr>
+        <tr>
+          <td>Irrenunciabilidad</td>
+          <td>Consiste en la prohibición que imponen las leyes de  trabajo de renunciar a todos los beneficios y garantías por tratarse de normas  imperativas, aún en contra de la voluntad de los particulares. </td>
+        </tr>
+        <tr>
+          <td>Democrático</td>
+          <td>Este principio se orienta a  obtener la dignificación tanto económica como moral de los trabajadores,  reivindicando todos los derechos de los trabajadores frente a los patronos  buscando así la armonía social.</td>
+        </tr>
+        <tr>
+          <td>Conciliatorio (5to considerando y Art. 103 de la CPRG)</td>
+          <td>Este  principio implica que dentro de una relación jurídica laboral las dos partes de  la relación, sacrifiquen parte de sus intereses para llegar a un arreglo, en un  diferendo determinado, sin violar otros principios que favorecen a los  trabajadores.</td>
+        </tr>
+        <tr>
+          <td>Derecho Individual de Trabajo</td>
+          <td>Es  el  conjunto de principios, instituciones y normas que regulan la formación,  modificación, suspensión y disolución de las relaciones individuales de trabajo  y determinan las condiciones generales de prestaciones de los servicios</td>
+        </tr>
+        <tr>
+          <td>Derecho Colectivo de Trabajo</td>
+          <td>Constituyen el conjunto de normas que regulan la formación y funcionamiento  de las asociaciones profesionales de trabajadores y patronos (sindicatos), sus  relaciones entre sí. </td>
+        </tr>
+        <tr>
+          <td>Leyes Constitucionales</td>
+          <td>CPRG</td>
+        </tr>
+        <tr>
+          <td>Leyes Internacionales</td>
+          <td>Convenios OIT (NIT) </td>
+        </tr>
+        <tr>
+          <td>Leyes Ordinarias</td>
+          <td>Código de Trabajo, Otras Leyes (Bono 14,  Aguinaldo, Día de la Madre, Día de la Secretaria, Bonificación  Incentivo)</td>
+        </tr>
+        <tr>
+          <td>Leyes Reglamentarias</td>
+          <td>Reglamento para la negociación, suscripción y denuncia de pactos  colectivos, Reglamento para las  votaciones sindicales, Reglamento para la  inscripción, reconocimiento de personalidad  jurídica y aprobación de  estatutos de un Sindicato, Reglamento para  contratar a menores de edad, Reglamento para  contratar a extranjeros, Reglamento del período  de lactancia.</td>
+        </tr>
+        <tr>
+          <td>Leyes Profesionales</td>
+          <td>Pacto Colectivo de Condiciones de Trabajo, Contrato Colectivo de  Condiciones de Trabajo, Reglamento Interior de  Trabajo</td>
+        </tr>
+        <tr>
+          <td>CONTRATO</td>
+          <td>Es un acto mediante el cual se crea, modifica o extingue una relación  jurídica entre una o más personas. </td>
+        </tr>
+        <tr>
+          <td>Contrato Individual de Trabajo</td>
+          <td>Es el vínculo econòmico-jurìdico  mediante el que una persona (trabajador) queda obligada a prestar a otra  (patrono), sus servicios personales o a ejecutarle una obra, personalmente,  bajo la dependencia continuada.</td>
+        </tr>
+        <tr>
+          <td>Subordinación</td>
+          <td>consiste en la voluntad de sujeción de una persona a seguir las  instrucciones de otra dentro del contexto de los servicios pactados.</td>
+        </tr>
+        <tr>
+          <td>Salario (Art. 88CDT)</td>
+          <td>Salario o sueldo es la retribución que el patrono debe pagar al  trabajador en virtud del cumplimiento del contrato de trabajo o de la relación  laboral.</td>
+        </tr>
+        <tr>
+          <td>Suspensión  de los contratos de trabajo</td>
+          <td>hay suspensión de los  contratos de trabajo cuando una o las dos partes que forma la relación laboral  deja o dejan de cumplir parcial o totalmente durante un tiempo, alguna de sus  respectivas obligaciones fundamentales (prestación de trabajo y pago del  salario)</td>
+        </tr>
+        <tr>
+          <td><strong>Individual parcial</strong></td>
+          <td>Cuando una misma causa  afecta a  la mayoría o la totalidad de las relaciones de   trabajo vigentes en  una empresa.</td>
+        </tr>
+        <tr>
+          <td><strong>Individual total</strong></td>
+          <td>cuando afecta a las  dos partes<u> </u>en la relación laboral, por lo que las dos partes dejan de  cumplir sus obligaciones fundamentales.</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td></tr>
+    </table>
+</body>
+</html>
