@@ -8,8 +8,20 @@
  *
  * @author PERSONAL
  */
+ /**
+ las   variables  simbre  globales  de  toda  la nonis y de  "bancos " 
+ */
+
+
 public class dcfd extends javax.swing.JFrame {
-float sueldoExtra, comisiones, otrosIngresos,bonficacion =250 ;
+/**
+ en e el  frama y aqui pongan  el  de bonificacion =  bono 14  a aguinaldo
+ * los  egresos 
+ * sueldo
+ * tanmbien que  pongan  el  numero de   cuentas  y  banco  a que  pertenezen
+ */
+    
+    float sueldoExtra, comisiones, otrosIngresos,bonficacion =250 ;
      float igss=(float) 0.83;  float isr;   float anticipos, dj, otrosDescuentos;
        float igss1;  
       float totDesc;
@@ -239,7 +251,12 @@ float sueldoExtra, comisiones, otrosIngresos,bonficacion =250 ;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     id=Float.parseFloat(tid.getText());
+   /**
+ *
+ *  se  extrae  se calcula y  se manda tanto como  afuera de  la condicion como  adento
+ */
+        
+        id=Float.parseFloat(tid.getText());
       sueldoExtra=Float.parseFloat(c3.getText());
     c3.setText(String.valueOf(sueldoExtra));
       comisiones=Float.parseFloat(c.getText());
@@ -253,7 +270,10 @@ float sueldoExtra, comisiones, otrosIngresos,bonficacion =250 ;
               horas=(float) (sueldoExtra*1.5);
                totIngresos = (float) (sueldo+horas+comisiones+otrosIngresos);
                 p3.setText(String.valueOf(totIngresos));
-     
+     /**
+ *
+ *  se  escoje un un  radio buton   de los  de si  y con la  condicion  se calcacula o no
+ */
                       if (a.isSelected())     {
              aviso.setText("activo");   }
 else {
@@ -268,6 +288,15 @@ else {
       sueldoExtra=Float.parseFloat(c3.getText());
       horas=(float) (sueldoExtra*1.5);
      c_h.setText(String.valueOf(horas));
+     
+     /**
+ *
+ * obserbaciones   en el frame tiene que  llegar todo  hasta con el  el  para que  se salga  se el  resultado   si no error 
+ * cualquier  cosa  me dicen
+ */
+     
+     
+     
           }
   else {
              aviso.setText("0.0");}
