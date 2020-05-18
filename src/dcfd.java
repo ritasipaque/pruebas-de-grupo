@@ -274,6 +274,10 @@ public class dcfd extends javax.swing.JFrame {
  *
  *  se  escoje un un  radio buton   de los  de si  y con la  condicion  se calcacula o no
  */
+       /**
+ *
+ *  rechas
+ */
                       if (a.isSelected())     {
              aviso.setText("activo");   }
 else {
