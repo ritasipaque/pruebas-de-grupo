@@ -298,7 +298,11 @@ else {
  * obserbaciones   en el frame tiene que  llegar todo  hasta con el  el  para que  se salga  se el  resultado   si no error 
  * cualquier  cosa  me dicen
  */
-     
+     /**
+ *
+ * obserbaciones   en el frame tiene que  llegar todo  hasta con el  el  para que  se salga  se el  resultado   si no error 
+ * cualquier  cosa  me dicen
+ */     
      
      
           }
